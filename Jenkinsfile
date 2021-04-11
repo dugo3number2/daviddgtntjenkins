@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'gcc' } }
+    agent { docker { image 'node:14-alpine' } }
     stages {
         stage('build') {
             steps {
-                sh 'g++ -o main main.cpp'
+                sh 'npm --version'
             }
         }
     }
